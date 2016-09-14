@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3实现Tab切换</title>
+    <style>
+
+        .main {
+            width: 300px;
+            height: 150px;
+            margin: 50px auto;
+            position: relative;
+            color: black;
+        }
+        .main input {
+            display: none;
+        }
+        .main label {
+            cursor: pointer;
+            height: 24px;
+            display: block;
+        }
+        .main ul {
+            list-style: none;
+        }
+        .main li {
+            float: left;
+            width: 50px;
+            height: 24px;
+            line-height: 24px;
+            background: grey;
+            margin-right: 3px;
+        }
+        .main div {
+            width: 300px;
+            height: 126px;
+            position: absolute;
+            top: 24px;
+            left: 0;
+            background: pink;
+            display: none;
+        }
+        .main input:checked~ label {
+            background: pink;
+        }
+        .main input:checked~ div {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" id="tab1" >
+                <label for="tab1">Tab1</label>
+                <div>11111111111111</div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab2" checked>
+                <label for="tab2">Tab2</label><!-- label for要对应他的id  -->
+                <div>222222222222222</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

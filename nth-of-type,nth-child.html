@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	html {
+  font-family: sans-serif;
+  font-size:30px;
+}
+
+span, div em {
+  padding: 10px;
+  border: 1px solid green;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+/*nth-child:规定属于其·父元素·的子元素的每个span的背景色(如果元素不是span就无效)*/
+
+/*
+tr:nth-child(2n+1)
+表示HTML表格中的奇数行。
+tr:nth-child(odd)
+表示HTML表格中的奇数行。
+tr:nth-child(2n)
+表示HTML表格中的偶数行。
+tr:nth-child(even)
+表示HTML表格中的偶数行。
+span:nth-child(0n+1)
+表示子元素中第一个且为span的元素，与 :first-child 选择器作用相同。
+span:nth-child(1)
+同上。
+span:nth-child(-n+3)
+匹配前三个子元素中的span元素。
+*/
+
+/*nth-of-type:规定属于其父元素的第二个 span 元素*/
+		.first span:nth-child(-n+4){
+			background-color:red;
+		}
+    .second span:nth-of-type(-n+4) {
+      background:green;
+    }
+
+	</style>
+</head>
+<body>
+	<div class="first">
+      <span>This span is selected!</span>
+      <span>This span is not. :(</span>
+      <em>This one is an em.</em>
+      <span>What about this?</span>
+      <span>And this one?</span>
+      <span>Another example</span>
+      <span>Yet another example</span>
+      <span>Aaaaand another</span>
+</div>
+<br/>
+<div class="second">
+      <span>This span is selected!</span>
+      <span>This span is not. :(</span>
+      <em>This one is an em.</em>
+     <!--  <em><span>This one is an em.</span></em>会被选中 -->
+      <span>What about this?</span>
+      <span>And this one?</span>
+      <span>Another example</span>
+      <span>Yet another example</span>
+      <span>Aaaaand another</span>
+</div>
+
+</body>
+</html>

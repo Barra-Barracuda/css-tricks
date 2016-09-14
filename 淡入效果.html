@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{	
+		opacity: 0;
+	}
+	.visible{
+		transition: 2s linear;
+		background: red;
+		opacity: 1;
+	}
+</style>
+<body>
+	<div>123</div>
+	<script>
+		var oDiv =document.getElementsByTagName('div')[0];
+		window.onload = function(){
+			oDiv.setAttribute('class', 'visible')
+		}
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{padding: 0;margin:0;}
+	.div1{
+		transform: translate(100px,100px); /*位移*/
+		background: red;
+		width: 100px;
+		height: 100px;
+	}
+	.div2{
+		margin-top:200px;
+		margin-left:200px;
+		transform: scale(2,2); /*宽高放大2倍*/
+		background: blue;
+		width: 100px;
+		height: 100px;
+	}
+	.div3{
+		margin-top:200px;
+	    animation: divSkew 5s infinite alternate;
+		background: pink;
+		width: 100px;
+		height: 100px;
+		transform:skew(60deg,60deg); /*围绕 X 轴把元素翻转 60 度，围绕 Y 轴翻转 60 度。*/
+
+	}
+	@keyframes divSkew{
+		0%{transform:skew(0deg,0deg)};
+		25%{transform:skew(90deg,90deg)};
+		50%{transform:skew(180deg,180deg)};
+		75%{transform:skew(270deg,270deg)};
+		100%{transform:skew(360deg,360deg)};
+	}
+</style>
+<body>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+
+</body>
+</html>

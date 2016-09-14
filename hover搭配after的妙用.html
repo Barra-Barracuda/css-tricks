@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+span{display:block;
+position:relative;}
+	div{
+		width:70px;
+		line-height:30px;
+		background:grey;
+		text-align: center;
+	}
+	div:hover:after{
+		content:'';
+		position:absolute;
+		width:70px;
+		height:3px;
+		background:#4388c9;
+		top:-3px;
+		left:0px;
+	}
+</style>
+<body>
+<span>
+	<div>123</div>
+	</span>
+</body>
+</html>
